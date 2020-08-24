@@ -1176,6 +1176,7 @@ class Model
 				// @codeCoverageIgnoreEnd
 			}
 			$set[$this->deletedField] = $this->setDate();
+			$builder->where($this->deletedField, null);
 
 			if ($this->useTimestamps && ! empty($this->updatedField))
 			{
